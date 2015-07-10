@@ -9,7 +9,7 @@
     <title>AV BIKE SHOP</title>
     
     <!-- Bootstrap -->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     
     
      <!--[if lt IE 9]>
