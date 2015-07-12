@@ -39,8 +39,8 @@
     <div class="well"><p style="text-align:center;"><b>AV BIKE SHOP</b></p></div>
     <ul class="nav nav-pills">
     <!--class="active"  -->
-    <li  style="background-color:#33CCFF;width:24.8%;"><a href="#" >SEARCH</a></li>
-    <li style="background-color:#33CCFF;width:24.8%;" <s:if test="tabIndex.equals('home')">class="active"</s:if> ><a href="#" >BUY</a></li>
+    <li  style="background-color:#33CCFF;width:24.8%;" <s:if test="tabIndex.equals('home')">class="active"</s:if>><a href="#" >SEARCH</a></li>
+    <li style="background-color:#33CCFF;width:24.8%;"  ><a href="#" >BUY</a></li>
     <li style="background-color:#33CCFF;width:24.8%;"><a href="#" >SELL</a></li>
     <li style="background-color:#33CCFF;;width:24.8%;"><a href="#" >REPORTS</a></li>
   </ul>

@@ -9,38 +9,124 @@
 <%-- <script type="text/javascript" src="js/bootstrap.min.js"></script>  --%>
 <%--  <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>  --%>
 
+<style type="text/css">
+
+.row {
+
+margin-bottom: 20px;
+
+}
+
+label {
+	font-weight: normal;
+}
+
+.breadcrumb {
+    background-color: #ffffff;
+    }
+
+</style>
 
 </head>
 <body>
 <div class="container">
+
+
+    <ul class="breadcrumb">
+
+        <li><a href="#">Home</a></li>
+
+     <!--    <li><a href="#">Products</a></li>-->
+
+        <li class="active">Search</li>
+
+    </ul>
+
+
 <div class="panel panel-default">
   <div class="panel-body">
   
   <div class="row">
         <div class='col-sm-6'>
             <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label"> Bike No </label>
+                    <input type='text' class="form-control input-sm" />
+                 </div>
+            </div>
+        </div>
+        
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label" > Buyer Name </label>
+                    <input type='text'  class="form-control input-sm" />
+                  
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  
+  
+  
+  <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label">Start Date : </label>
                 <div class='input-group date' id='datetimepicker5'>
-                    <input type='text' class="form-control" />
+                    <input type='text' class="form-control input-sm" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
+                </div>
+                 </div>
+            </div>
+        </div>
+        
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label" >End Date : </label>
+                <div class='input-group date' id='datetimepicker6'>
+                   
+                    <input type='text' class="form-control" class="form-control input-sm" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    
+                 </div>   
                 </div>
             </div>
         </div>
         <script type="text/javascript">
             $(function () {
                 $('#datetimepicker5').datetimepicker({
-                    defaultDate: "11/1/2013",
-                    disabledDates: [
-                        moment("12/25/2013"),
-                        new Date(2013, 11 - 1, 21),
-                        "11/22/2013 00:53"
-                    ]
+                	showClose : true,
+                    
+                });
+            });
+            
+            $(function () {
+                $('#datetimepicker6').datetimepicker({
+                	showClose : true,
+                    
+                   
                 });
             });
         </script>
     </div>
   
+  <div class="row"> 
+    <div class="btn-group" style="margin: 20px;">
+            
+      <button type="button" class="btn btn-info" style="margin: 10px;"  data-toggle="button">SEARCH</button>
+      <button type="button" class="btn btn-danger" style="margin: 10px;"  data-toggle="button">CLEAR</button>
+   
+  </div>
+   </div>
+  </div>
   
   </div>
 </div>
