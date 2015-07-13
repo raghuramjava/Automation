@@ -22,40 +22,47 @@
      <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
     
+<style type="text/css">
 
+label {
+	font-weight: normal;
+}
+
+
+</style>
 
 </head>
 <body>
 	
     <div class="container">
-    <div class="jumbotron" style="background-color: #33CCFF;">
-    <form class="form-horizontal" role="form" action="loginAction">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="usr">User Name :</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="userName" placeholder="Enter user name" style="width: 50%;">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Password:</label>
-      <div class="col-sm-10">          
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" style="width: 50%;" >
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
-  </form>
+    
+    <div class="panel panel-primary" style="margin-top: 20px;width: 50%;margin: auto;">
+      <div class="panel-heading" style="text-align: center;">LOG IN</div>
+      <div class="panel-body">
+    
+    
+    
+    
+   
+     <form role="form" action="loginAction">
+  <div class="form-group">
+    <label for="email">User Name</label>
+    <input type="text" class="form-control" id="email">
   </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+  
+  
+    </div>
+    </div>
+  
 </div>
  
 </body>

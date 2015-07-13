@@ -88,16 +88,14 @@ label {
         <div class='col-sm-6'>
             <div class="form-group">
             <div class="col-xs-6">
-            <label class="control-label" >End Date : </label>
+            <label class="control-label">End Date : </label>
                 <div class='input-group date' id='datetimepicker6'>
-                   
-                    <input type='text' class="form-control" class="form-control input-sm" />
+                    <input type='text' class="form-control input-sm" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                    
-                 </div>   
                 </div>
+                 </div>
             </div>
         </div>
         <script type="text/javascript">
@@ -130,7 +128,7 @@ label {
   
   </div>
 </div>
-</div>
+
 
  
 
