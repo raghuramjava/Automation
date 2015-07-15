@@ -30,13 +30,22 @@
 <script src="js/collapse.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
+<style type="text/css">
+
+.breadcrumb {
+    background-color: #ffffff;
+    }
+label {
+	font-weight: normal;
+}
+</style>
 
 </head>
 <body>
 	
 <div class="container">
 
-    <div class="well"><p style="text-align:center;"><b>AV BIKE SHOP</b></p></div>
+    <div class="well" style="background-color: #337ab7;color: #fff;" ><p style="text-align:center;"><b>AV BIKE SHOP</b></p></div>
     <ul class="nav nav-pills">
     <!--class="active"  -->
     <li  style="background-color:#33CCFF;width:24.8%;" <s:if test="tabIndex.equals('home')">class="active"</s:if>><a href="#" >SEARCH</a></li>

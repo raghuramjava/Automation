@@ -1,0 +1,17 @@
+    <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">  
+
+<struts>
+
+<package name="search"   extends="default">
+
+<action name="searchAction" class="search.SearchAction"   method="searchBike">
+<result name="success"  type="tiles">search-result</result>
+
+
+</action>
+
+</package>
+
+</struts>

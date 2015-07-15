@@ -17,13 +17,8 @@ margin-bottom: 20px;
 
 }
 
-label {
-	font-weight: normal;
-}
 
-.breadcrumb {
-    background-color: #ffffff;
-    }
+
 
 </style>
 
@@ -45,7 +40,7 @@ label {
 
 <div class="panel panel-default">
   <div class="panel-body">
-  
+  <form action="searchAction" id="searchForm" name="searchForm">
   <div class="row">
         <div class='col-sm-6'>
             <div class="form-group">
@@ -115,21 +110,52 @@ label {
             });
         </script>
     </div>
+    
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label"> Model No </label>
+                    <input type='text' class="form-control input-sm" />
+                 </div>
+            </div>
+        </div>
+        
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label" > Chase No </label>
+                    <input type='text'  class="form-control input-sm" />
+                  
+                </div>
+            </div>
+        </div>
+        
+    </div>
   
   <div class="row"> 
     <div class="btn-group" style="margin: 20px;">
             
-      <button type="button" class="btn btn-info" style="margin: 10px;"  data-toggle="button">SEARCH</button>
+      <button type="button" class="btn btn-info" style="margin: 10px;"  data-toggle="button" onclick="submit();">SEARCH</button>
       <button type="button" class="btn btn-danger" style="margin: 10px;"  data-toggle="button">CLEAR</button>
    
   </div>
    </div>
+   
+   </form>
   </div>
   
   </div>
 </div>
 
+<script type="text/javascript">
 
+function submit(){
+	 document.getElementById("searchForm").submit();
+}
+
+
+</script>
  
 
 

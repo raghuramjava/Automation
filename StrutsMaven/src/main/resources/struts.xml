@@ -3,7 +3,9 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">  
     <struts>  
     <constant name="struts.devMode" value="true" />
-    <package name="default" extends="struts-default">  
+    <include file="struts-default.xml" /> 
+    <package name="default" extends="struts-default"> 
+     
     
      <result-types>
          <result-type name="tiles" 
@@ -19,4 +21,7 @@
     </action>
       
     </package>  
+    
+      
+     <include file="search.xml" /> 
     </struts>      

@@ -11,5 +11,10 @@
    <put-attribute name="body" value="/general/loginSucces.jsp"/>   
    </definition>  
    
+   <definition name="search-result" extends="login-success">   
+   <put-attribute name="title" value="search result "/>   
+   <put-attribute name="body" value="/search/SearchResult.jsp"/>   
+   </definition>
+   
    
    </tiles-definitions>
