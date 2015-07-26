@@ -34,17 +34,14 @@ label {
 </head>
 <body>
 	
-    <div class="container">
-    
-    <div class="panel panel-primary" style="margin-top: 20px;width: 50%;margin: auto;">
-      <div class="panel-heading" style="text-align: center;">LOG IN</div>
-      <div class="panel-body">
+    <div class="container" style="width: 579px;margin-top: 30px;">
     
     
     
-    
-   
-     <form role="form" action="loginAction">
+    <div class="panel panel-default" >
+    <div class="panel-heading" style="background-color: #337ab7;color: #fff;text-align: center;">LOG IN</div>
+    <div class="panel-body">
+    <form role="form" action="loginAction">
   <div class="form-group">
     <label for="email">User Name</label>
     <input type="text" class="form-control" id="email">
@@ -58,10 +55,30 @@ label {
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
+    </div>
+  </div>
+
+    
+    
+    
+   
+   <!--   <form role="form" action="loginAction">
+  <div class="form-group">
+    <label for="email">User Name</label>
+    <input type="text" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>--> 
   
   
-    </div>
-    </div>
+   
   
 </div>
  

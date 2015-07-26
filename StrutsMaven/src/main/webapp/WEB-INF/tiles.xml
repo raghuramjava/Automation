@@ -7,13 +7,23 @@
  <tiles-definitions>  
       
    <definition name="login-success" template="/layoutmanager.jsp">   
-   <put-attribute name="title" value="Welcome Page"/>   
-   <put-attribute name="body" value="/general/loginSucces.jsp"/>   
+   <put-attribute name="title" value="Search Page"/>   
+   <put-attribute name="body" value="/pages/general/loginSucces.jsp"/>   
    </definition>  
    
    <definition name="search-result" extends="login-success">   
-   <put-attribute name="title" value="search result "/>   
-   <put-attribute name="body" value="/search/SearchResult.jsp"/>   
+   <put-attribute name="title" value="Search result "/>   
+   <put-attribute name="body" value="/pages/search/SearchResult.jsp"/>   
+   </definition>
+   
+   <definition name="new-bike" extends="login-success">   
+   <put-attribute name="title" value="Create Bike "/>   
+   <put-attribute name="body" value="/pages/search/newBike.jsp"/>   
+   </definition>
+   
+   <definition name="bike-details" extends="login-success">   
+   <put-attribute name="title" value="Bike Details "/>   
+   <put-attribute name="body" value="/pages/search/bikeDetails.jsp"/>   
    </definition>
    
    

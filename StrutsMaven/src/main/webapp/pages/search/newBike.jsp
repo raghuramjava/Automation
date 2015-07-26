@@ -31,9 +31,9 @@ margin-bottom: 20px;
 
         <li><a href="#">Home</a></li>
 
-     <!--    <li><a href="#">Products</a></li>-->
+      <li><a href="#">Searh</a></li>
 
-        <li class="active">Search</li>
+        <li class="active">New Bike</li>
 
     </ul>
 
@@ -54,7 +54,7 @@ margin-bottom: 20px;
         <div class='col-sm-6'>
             <div class="form-group">
             <div class="col-xs-6">
-            <label class="control-label" > Buyer Name </label>
+            <label class="control-label" > Bike Type </label>
                     <input type='text'  class="form-control input-sm" />
                   
                 </div>
@@ -63,55 +63,7 @@ margin-bottom: 20px;
         
     </div>
   
-  
-  
-  <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-            <div class="col-xs-6">
-            <label class="control-label">Start Date : </label>
-                <div class='input-group date' id='datetimepicker5'>
-                    <input type='text' class="form-control input-sm" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-                 </div>
-            </div>
-        </div>
-        
-        <div class='col-sm-6'>
-            <div class="form-group">
-            <div class="col-xs-6">
-            <label class="control-label">End Date : </label>
-                <div class='input-group date' id='datetimepicker6'>
-                    <input type='text' class="form-control input-sm" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-                 </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker5').datetimepicker({
-                	showClose : true,
-                    
-                });
-            });
-            
-            $(function () {
-                $('#datetimepicker6').datetimepicker({
-                	showClose : true,
-                    
-                   
-                });
-            });
-        </script>
-    </div>
-    
-    <div class="row">
+   <div class="row">
         <div class='col-sm-6'>
             <div class="form-group">
             <div class="col-xs-6">
@@ -133,12 +85,44 @@ margin-bottom: 20px;
         
     </div>
   
+  
+  
+  
+  
+  
+  <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+            <div class="col-xs-6">
+            <label class="control-label"> Date : </label>
+                <div class='input-group date' id='datetimepicker5'>
+                    <input type='text' class="form-control input-sm" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                 </div>
+            </div>
+        </div>
+        
+       
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                	showClose : true,
+                    
+                });
+            });
+            
+           
+        </script>
+    </div>
+    
+   
+  
   <div class="row"> 
     <div class="btn-group" style="margin: 20px;">
-            
-      <button type="button" class="btn btn-info" style="margin: 10px;"  data-toggle="button" onclick="submit();">SEARCH</button>
-      <button type="button" class="btn btn-danger" style="margin: 10px;"  data-toggle="button">CLEAR</button>
-   
+     <button type="button" class="btn-success" style="margin: 10px;"  data-toggle="button"><span><i class="fa fa-floppy-o"></i></span>SAVE BIKE</button>
   </div>
    </div>
    

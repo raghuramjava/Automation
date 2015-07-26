@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>AV BIKE SHOP</title>
+    <link rel="shortcut icon" href="img/bike.ico" />
     
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-<!--      <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+     <link href="css/font-awesome.min.css" rel="stylesheet" />
+    
       <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     
      <!--[if lt IE 9]>
@@ -34,6 +35,7 @@
 
 .breadcrumb {
     background-color: #ffffff;
+     margin:10px;
     }
 label {
 	font-weight: normal;

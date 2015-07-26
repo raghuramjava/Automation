@@ -13,12 +13,14 @@
       </result-types>
       
     <action name="redirctAction" class="general.BaseAction">  
-    <result name="success">general/login.jsp</result>  
+    <result name="success">pages/general/login.jsp</result>  
     </action>  
     
      <action name="loginAction" class="general.BaseAction" method="login">  
     <result name="success"  type="tiles">login-success</result>  
     </action>
+    
+   
       
     </package>  
     

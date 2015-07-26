@@ -9,8 +9,16 @@
 <action name="searchAction" class="search.SearchAction"   method="searchBike">
 <result name="success"  type="tiles">search-result</result>
 
-
 </action>
+
+ <action name="newBikeAction" class="search.BikeAction" method="newBike">  
+ <result name="success"  type="tiles">new-bike</result>  
+ </action>
+ 
+ <action name="bikeDetailsAction" class="search.BikeAction" method="bikeDetails">  
+ <result name="success"  type="tiles">bike-details</result>  
+ </action>
+
 
 </package>
 
