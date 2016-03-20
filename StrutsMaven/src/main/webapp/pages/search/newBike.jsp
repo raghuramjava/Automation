@@ -40,13 +40,13 @@ margin-bottom: 20px;
 
 <div class="panel panel-default">
   <div class="panel-body">
-  <form action="searchAction" id="searchForm" name="searchForm">
+  <form id="bikeForm" name="bikeForm" action="createBikeAction">
   <div class="row">
         <div class='col-sm-6'>
             <div class="form-group">
             <div class="col-xs-6">
             <label class="control-label"> Bike No </label>
-                    <input type='text' class="form-control input-sm" />
+                    <input type='text' class="form-control input-sm" name="bikeNo"/>
                  </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ margin-bottom: 20px;
             <div class="form-group">
             <div class="col-xs-6">
             <label class="control-label" > Bike Type </label>
-                    <input type='text'  class="form-control input-sm" />
+                    <input type='text'  class="form-control input-sm" name="bikeType" id="bikeType"/>
                   
                 </div>
             </div>
@@ -68,7 +68,7 @@ margin-bottom: 20px;
             <div class="form-group">
             <div class="col-xs-6">
             <label class="control-label"> Model No </label>
-                    <input type='text' class="form-control input-sm" />
+                    <input type='text' class="form-control input-sm" name="modelNo" />
                  </div>
             </div>
         </div>
@@ -77,7 +77,7 @@ margin-bottom: 20px;
             <div class="form-group">
             <div class="col-xs-6">
             <label class="control-label" > Chase No </label>
-                    <input type='text'  class="form-control input-sm" />
+                    <input type='text'  class="form-control input-sm" name="chaseNo"/>
                   
                 </div>
             </div>
@@ -96,7 +96,7 @@ margin-bottom: 20px;
             <div class="col-xs-6">
             <label class="control-label"> Date : </label>
                 <div class='input-group date' id='datetimepicker5'>
-                    <input type='text' class="form-control input-sm" />
+                    <input type='text' class="form-control input-sm" name="cratedDate"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -122,7 +122,7 @@ margin-bottom: 20px;
   
   <div class="row"> 
     <div class="btn-group" style="margin: 20px;">
-     <button type="button" class="btn-success" style="margin: 10px;"  data-toggle="button"><span><i class="fa fa-floppy-o"></i></span>SAVE BIKE</button>
+     <button type="submit" class="btn-success" style="margin: 10px;"  ><span><i class="fa fa-floppy-o"></i></span>SAVE BIKE</button>
   </div>
    </div>
    

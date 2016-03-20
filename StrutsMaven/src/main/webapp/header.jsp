@@ -29,8 +29,13 @@
  <script src="js/moment.js"></script>
   <script src="js/transition.js"></script>
 <script src="js/collapse.js"></script>
+
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
+
+ <script src="js/respond.min.js"></script>
+<script src="js/html5shiv.min.js"></script>
+
 <style type="text/css">
 
 .breadcrumb {
@@ -47,13 +52,13 @@ label {
 	
 <div class="container">
 
-    <div class="well" style="background-color: #337ab7;color: #fff;" ><p style="text-align:center;"><b>AV BIKE SHOP</b></p></div>
+    <div class="well" style="background-color: #337ab7;color: #fff;" ><p style="text-align:center;"><b>RESTAURANT RESRVATION SYSTEM</b></p></div>
     <ul class="nav nav-pills">
     <!--class="active"  -->
-    <li  style="background-color:#33CCFF;width:24.8%;" <s:if test="tabIndex.equals('home')">class="active"</s:if>><a href="#" >SEARCH</a></li>
-    <li style="background-color:#33CCFF;width:24.8%;"  ><a href="#" >BUY</a></li>
-    <li style="background-color:#33CCFF;width:24.8%;"><a href="#" >SELL</a></li>
-    <li style="background-color:#33CCFF;;width:24.8%;"><a href="#" >REPORTS</a></li>
+    <li  style="background-color:#33CCFF;width:24.5%;" <s:if test="tabIndex.equals('home')">class="active"</s:if>><a href="#" >HOME</a></li>
+    <li style="background-color:#33CCFF;width:24.5%;"  ><a href="#" >RESERVATION</a></li>
+    <li style="background-color:#33CCFF;width:24.5%;"><a href="#" >REPORTS</a></li>
+    <li style="background-color:#33CCFF;;width:24.5%;"><a href="#" >ADMIN</a></li>
   </ul>
 </div>
     

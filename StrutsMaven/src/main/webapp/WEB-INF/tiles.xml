@@ -8,7 +8,7 @@
       
    <definition name="login-success" template="/layoutmanager.jsp">   
    <put-attribute name="title" value="Search Page"/>   
-   <put-attribute name="body" value="/pages/general/loginSucces.jsp"/>   
+   <put-attribute name="body" value="/pages/general/HomeCalendar.jsp"/>   
    </definition>  
    
    <definition name="search-result" extends="login-success">   

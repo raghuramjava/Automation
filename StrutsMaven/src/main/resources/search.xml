@@ -15,10 +15,13 @@
  <result name="success"  type="tiles">new-bike</result>  
  </action>
  
- <action name="bikeDetailsAction" class="search.BikeAction" method="bikeDetails">  
+ <action name="bikeDetailsAction" class="search.BikeAction" >  
  <result name="success"  type="tiles">bike-details</result>  
  </action>
 
+<action name="createBikeAction" class="newBike.BikAction" >  
+ <result name="success"  type="tiles">new-bike</result>  
+ </action>
 
 </package>
 
