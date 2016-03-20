@@ -41,14 +41,14 @@ label {
     <div class="panel panel-default" >
     <div class="panel-heading" style="background-color: #337ab7;color: #fff;text-align: center;">LOG IN</div>
     <div class="panel-body">
-    <form role="form" action="loginAction">
+    <form role="form" method="post" action="loginAction">
   <div class="form-group">
     <label for="email">User Name</label>
-    <input type="text" class="form-control" id="email">
+    <input type="text" class="form-control" id="userName" name="userName">
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <input type="password" class="form-control" id="password" name="password">
   </div>
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>

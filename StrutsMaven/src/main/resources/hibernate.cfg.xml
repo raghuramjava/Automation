@@ -12,6 +12,7 @@
      <property name="hbm2ddl.auto">update</property> 
 
    <mapping class = "mapping.Bike" /> 
+    <mapping class = "mapping.Users" /> 
     
   </session-factory>
 </hibernate-configuration>

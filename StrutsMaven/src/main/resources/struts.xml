@@ -18,6 +18,7 @@
     
      <action name="loginAction" class="general.BaseAction" method="login">  
     <result name="success"  type="tiles">login-success</result>  
+    <result name="input">pages/general/login.jsp</result>
     </action>
     
    

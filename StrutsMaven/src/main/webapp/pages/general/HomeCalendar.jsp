@@ -33,7 +33,7 @@ $(document).ready(function() {
 
 <style type="text/css">
 #calendar {
-		width: 900px;
+		width: 90%;
 		margin: 0 auto;
 	}
 
@@ -46,11 +46,11 @@ $(document).ready(function() {
 <body>
 <div class="container">
 
-     <ul class="breadcrumb">
+     <!--  <ul class="breadcrumb">
 
         <li class="active">Home</li>
 
-    </ul>
+    </ul>-->
     <div class="panel panel-default">
   <div class="panel-body">
   <div id='calendar' ></div>
