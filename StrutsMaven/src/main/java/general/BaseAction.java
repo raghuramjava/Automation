@@ -26,6 +26,7 @@ public class BaseAction extends ActionSupport implements ModelDriven<BaseModel>{
 			baseDao = new BaseDao();
 			String authUser = baseDao.authenticateUser(baseModel);
 			if(authUser.equals("invalidUser")){
+				addActionError("Invalid credentials");
 				return INPUT;
 			}
 			

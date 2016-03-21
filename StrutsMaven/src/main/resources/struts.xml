@@ -21,6 +21,10 @@
     <result name="input">pages/general/login.jsp</result>
     </action>
     
+    <action name="forgotpassword" class="general.ForgotPasswordAction">  
+    <result name="success">/forgotPassword.jsp</result>  
+    </action>
+    
    
       
     </package>  

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+ <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -43,17 +44,25 @@ label {
     <div class="panel-body">
     <form role="form" method="post" action="loginAction">
   <div class="form-group">
+     
+     <s:if test="hasActionErrors()">
+   <div class="errors">
+      <s:actionerror/>
+   </div>
+     </s:if>
+  
     <label for="email">User Name</label>
-    <input type="text" class="form-control" id="userName" name="userName">
+    <input type="text" class="form-control" id="userName" name="userName" required="required">
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="password" name="password">
+    <input type="password" class="form-control" id="password" name="password" required="required">
   </div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
+  
   <button type="submit" class="btn btn-default">Submit</button>
+   <div class="form-group" style="margin-top: 10px;">
+    <label > <a href="forgotpassword">Forgot Password</a></label>
+  </div>
 </form>
     </div>
   </div>
@@ -62,20 +71,7 @@ label {
     
     
    
-   <!--   <form role="form" action="loginAction">
-  <div class="form-group">
-    <label for="email">User Name</label>
-    <input type="text" class="form-control" id="email">
-  </div>
-  <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-  <div class="checkbox">
-    <label><input type="checkbox"> Remember me</label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>--> 
+   
   
   
    
