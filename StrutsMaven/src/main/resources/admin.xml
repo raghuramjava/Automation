@@ -1,0 +1,105 @@
+  <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+    <struts>
+     
+    <package name="admin" namespace="/admin" extends="default">
+    <default-interceptor-ref name="chkSession"/>
+        
+     <action name="defaultaction" class="admin.AdminAction" > 
+<!--      <interceptor-ref name="loginInterceptor"></interceptor-ref>  -->
+    <result name="success"  type="tiles">admin-default</result>  
+    <result name="input">/pages/admin/Adminhome.jsp</result>
+    </action>
+    
+    <action name="emailConfigAction" class="admin.EmailManageAction" method="emailConfig" > 
+<!--     <interceptor-ref name="loginInterceptor"></interceptor-ref>   -->
+    <result name="success"  type="tiles">admin-email</result>  
+    
+    </action>
+    
+    <action name="saveEmailConfig" class="admin.EmailManageAction" method="saveEmailConfig" >  
+<!--     <interceptor-ref name="loginInterceptor"></interceptor-ref>  -->
+    <result name="success"  type="redirectAction">emailConfigAction</result>  
+    
+    </action>
+    
+    <action name="userManageAction" class="admin.UserManageAction" >  
+<!--     <interceptor-ref name="loginInterceptor"></interceptor-ref>  -->
+    <result name="success"  type="tiles">admin-userslist</result>  
+    
+    </action>
+    
+    
+    <action name="newUserAction" class="admin.UserManageAction" method="newUser" > 
+<!--     <interceptor-ref name="loginInterceptor"></interceptor-ref>   -->
+    <result name="success"  type="tiles">admin-newUser</result>  
+    
+    </action>
+    
+    
+     <action name="newUserSaveAction" class="admin.UserManageAction" method="saveUser" >  
+<!--      <interceptor-ref name="loginInterceptor"></interceptor-ref>  -->
+    <result name="success"  type="redirectAction">
+    <param name="actionName">userManageAction</param>
+    <param name="actionMessages">${actionMessages}</param>
+    </result> 
+    
+    <result name="input" type="tiles" >admin-newUser </result>
+   
+   
+   
+   
+    
+    </action>
+    
+    
+    <action name="deleteUserAction" class="admin.UserManageAction" method="deleteUsers" >  
+<!--     <interceptor-ref name="loginInterceptor"></interceptor-ref>  -->
+    
+    <result name="success"  type="redirectAction">
+    <param name="actionName">userManageAction</param>
+    <param name="actionMessages">${actionMessages}</param>
+    </result>
+    
+    <result name="input"  type="redirectAction">
+    <param name="actionName">userManageAction</param>
+    <param name="actionError">${actionError}</param>
+    </result>
+    
+    </action>
+    
+    
+    
+    <action name="pricingInvAction" class="reservation.ReservationManageAction" method="getPriceInventoryDetails" >
+     <result  type="tiles">reservation-pricing</result>
+     </action>
+     
+     <action name="pricingInvNewDateAction" class="reservation.ReservationManageAction" method="getPriceInventoryDetailsNewDate" >
+     <result  type="tiles">reservation-pricing</result>
+     </action>
+     
+     <action name="savePriceInventoryAction" class="reservation.ReservationManageAction" method="savePriceInventoryAction" >
+     <result name="success"  type="redirectAction">
+      <param name="actionName">pricingInvNewDateAction</param>
+      <param name="actionMessages">${actionMessages}</param>
+      <param name="month">${month}</param>
+      <param name="year">${year}</param>
+    </result> 
+     </action>
+    
+    <action name="updatePriceInventoryAction" class="reservation.ReservationManageAction" method="updatePriceInventoryAction" >
+     <result name="success"  type="redirectAction">
+      <param name="actionName">pricingInvNewDateAction</param>
+      <param name="actionMessages">${actionMessages}</param>
+      <param name="month">${month}</param>
+      <param name="year">${year}</param>
+    </result> 
+     </action>
+     
+    
+    
+    </package>
+    
+    </struts>
+    

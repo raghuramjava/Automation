@@ -1,0 +1,63 @@
+  <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd"> 
+    <struts>
+     
+    <package name="reservation" namespace="/reservation" extends="default">
+    <default-interceptor-ref name="chkSession"/>
+     <action name="defaultaction" class="reservation.ReservationModuleAction" >
+     <result  type="tiles">reservation-default</result>
+     </action>
+     
+     
+     <action name="newReservationAction" class="reservation.ReservationEditSaveAction" >
+     <result  type="tiles">reservation-newReservation</result>
+     </action> 
+     
+     <action name="getReservationDetailsAction" class="reservation.ReservationEditSaveAction" method="getReservationDetails">
+     <result type="tiles"> reservation-reservationDetails</result>
+    </action>
+     
+     <action name="saveReservation" class="reservation.ReservationEditSaveAction"  method="saveReservation">
+     <result  type="redirectAction">
+      <param name="actionName">getReservationDetailsAction</param>
+      <param name="actionMessages">${actionMessages}</param>
+      <param name="resId">${resId}</param>
+     </result>
+     </action>
+     
+      <action name="getInventoryAction" class="reservation.ReservationEditSaveAction"  method="getInventoryDetails">
+     
+     </action>
+     
+      <action name="cancelReservationAction" class="reservation.ReservationEditSaveAction"  method="cancelReservation">
+     <result  type="redirectAction">
+      <param name="actionName">getReservationDetailsAction</param>
+      <param name="actionMessages">${actionMessages}</param>
+      <param name="resId">${resId}</param>
+     </result>
+     </action>
+     
+      <action name="updateReservation" class="reservation.ReservationEditSaveAction"  method="updateReservation">
+     <result  type="redirectAction">
+      <param name="actionName">getReservationDetailsAction</param>
+      <param name="actionMessages">${actionMessages}</param>
+      <param name="resId">${resId}</param>
+     </result>
+     </action>
+     
+     <action name="searchReservationFormAction" class="reservation.SearchReservationAction"  >
+     <result  type="tiles">reservation-Search</result>
+      
+     </action>
+     
+      <action name="searchReservationtiAction" class="reservation.SearchReservationAction"  method="getSearchResult" >
+     <result  type="tiles">reservation-SearchResult</result>
+      
+     </action>
+     
+    
+    </package>
+    
+    </struts>
+    
