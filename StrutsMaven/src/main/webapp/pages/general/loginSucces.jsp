@@ -95,20 +95,7 @@ margin-bottom: 20px;
             </div>
         </div>
         <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker5').datetimepicker({
-                	showClose : true,
-                    
-                });
-            });
-            
-            $(function () {
-                $('#datetimepicker6').datetimepicker({
-                	showClose : true,
-                    
-                   
-                });
-            });
+           
         </script>
     </div>
     

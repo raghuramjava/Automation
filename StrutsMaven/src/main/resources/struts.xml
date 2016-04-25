@@ -3,14 +3,33 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">  
     <struts>  
     <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.excludePattern" value="/reservationChartAction" /> 
     <include file="struts-default.xml" /> 
-    <package name="default" extends="struts-default"> 
-     
     
-     <result-types>
+    
+    <package name="default" extends="struts-default"> 
+    
+      <result-types>
          <result-type name="tiles" 
          class="org.apache.struts2.views.tiles.TilesResult" />
       </result-types>
+      
+      <interceptors>
+            <interceptor name="loginInterceptor" class="interceptors.SessionCheckInterceptor" />
+            <interceptor-stack name="chkSession">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="loginInterceptor" />
+            </interceptor-stack>
+        </interceptors>
+      
+      
+         <global-results>
+         <result name="loginAction" type="redirectAction">
+         <param name="actionName">redirctAction</param>
+            <param name="namespace">/</param>
+         </result>
+    
+        </global-results>
       
     <action name="redirctAction" class="general.BaseAction">  
     <result name="success">pages/general/login.jsp</result>  
@@ -21,14 +40,40 @@
     <result name="input">pages/general/login.jsp</result>
     </action>
     
+    <action name="logoutAction" class="general.BaseAction" method="logoff">  
+    <result name="success">
+    <param name="location">pages/general/login.jsp</param>
+    
+    </result>  
+    </action>  
+    
+    <action name="changePasswordAction"  class="general.BaseAction"  method="changePassword">
+    
+    </action>
+    
+    
     <action name="forgotpassword" class="general.ForgotPasswordAction">  
     <result name="success">/forgotPassword.jsp</result>  
     </action>
     
-   
+    <action name="checkRegMail" class="general.ForgotPasswordAction" method="authUserAndSendMail">  
+    <result name="input">/forgotPassword.jsp</result> 
+     <result name="success">/passwordResetSuccess.jsp</result> 
+    </action>
+    
+    <action name="homeAction" class="general.BaseAction" method="home">  
+    <interceptor-ref name="chkSession"></interceptor-ref>
+    <result name="success"  type="tiles">login-success</result>  
+    <result name="input">pages/general/login.jsp</result>
+    </action>
+    
+    <action name="ajaxCalendarAction" class="general.BaseAction"  method="getReservationDetails" >
+    </action>
       
     </package>  
     
+    
       
-     <include file="search.xml" /> 
+     <include file="admin.xml" />   
+      <include file="reservation.xml" />  
     </struts>      

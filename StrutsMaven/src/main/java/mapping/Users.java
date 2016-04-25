@@ -5,13 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name ="users")
 public class Users {
 	@Column(name="id")
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id @SequenceGenerator(name = "UserSequence", sequenceName = "seq_users", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="UserSequence")
 	private int userId;
 	
 	@Column(name="admin")
@@ -28,6 +30,9 @@ public class Users {
 	private String loginId;
 	@Column(name="password")
 	private String password;
+	
+	@Column(name="active")
+	private boolean active;
 	
 	public int getUserId() {
 		return userId;
@@ -83,6 +88,14 @@ public class Users {
 
 	public void setLoginId(String loginId) {
 		this.loginId = loginId;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 }

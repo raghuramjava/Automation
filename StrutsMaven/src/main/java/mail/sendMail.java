@@ -1,47 +1,76 @@
 package mail;
 
 import javax.mail.*;
+
 import javax.mail.internet.*;
+import Connection.HibernateUtill;
+
+import mapping.EmailConfig;
+
+
+
+import Connection.HibernateUtill;
+
 import java.util.*;
+import org.hibernate.Session;
+import org.hibernate.Query;
 
 public class sendMail {
-	public static void sendMail(String emailFrom, String emailUser, String emailFromPasswd, String emailID, String subj, String message) throws Exception {
-		String host = "smtp.gmail.com", user = emailUser, pass = emailFromPasswd;
-		String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
-		String to = emailID;
-		String from = emailFrom;
-		String subject = subj;
-		String messageText = message;
-		boolean sessionDebug = true;
+	
+	
+	 public static void sendEmail  (String toMailAddress,String subject,String content) {
+		 try {
+	      String to = toMailAddress;//change accordingly
+	      
+	      org.hibernate.Session hsession = HibernateUtill.getSession();
+			Query query = hsession.createQuery("from EmailConfig ");
+			List<EmailConfig> emailConfigList = query.list();
+			EmailConfig  econfig = emailConfigList.get(0);
+			String   from = econfig.getEmail();
+			final String   username = econfig.getEmailId();
+			final String   password = econfig.getPassword();
+			String  host = econfig.getHost();
+			String port = econfig.getPort();
 
-		Properties props = System.getProperties();
-		props.put("mail.host", host);
-		props.put("mail.transport.protocol.", "smtp");
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.", "true");
-		props.put("mail.smtp.port", "465");
-		props.put("mail.smtp.socketFactory.fallback", "false");
-		props.put("mail.smtp.socketFactory.class", SSL_FACTORY);
+	      Properties props = new Properties();
+	      props.put("mail.smtp.auth", "true");
+	      props.put("mail.smtp.starttls.enable", "true");
+	      props.put("mail.smtp.host", host);
+	     
+	      props.put("mail.smtp.port", port);
 
-		Session mailSession = Session.getDefaultInstance(props, null);
-		mailSession.setDebug(sessionDebug);
+	      // Get the Session object.
+	      javax.mail.Session session = javax.mail.Session.getInstance(props,
+	    	      new javax.mail.Authenticator() {
+	    	         protected PasswordAuthentication getPasswordAuthentication() {
+	    	            return new PasswordAuthentication(username, password);
+	    	         }
+	    	      });
+	      
+	      
+	         // Create a default MimeMessage object.
+	         Message message = new MimeMessage(session);
 
-		Message msg = new MimeMessage(mailSession);
-		msg.setFrom(new InternetAddress(from));
-		InternetAddress[] address = {new InternetAddress(to)};
-		msg.setRecipients(Message.RecipientType.TO, address);
-		msg.setSubject(subject);
-		msg.setContent(messageText, "text/html");
+	         // Set From: header field of the header.
+	         message.setFrom(new InternetAddress(from));
 
-		Transport transport = mailSession.getTransport("smtp");
-		transport.connect(host, user, pass);
+	         // Set To: header field of the header.
+	         message.setRecipients(Message.RecipientType.TO,
+	         InternetAddress.parse(to));
 
-		try {
-			transport.sendMessage(msg, msg.getAllRecipients());
-		}
-		catch (Exception e) {
-			System.out.println("Error" + e.getMessage());
-		}
-		transport.close();
-	}
+	         // Set Subject: header field
+	         message.setSubject(subject);
+
+	         // Now set the actual message
+	         message.setContent(content, "text/html");
+
+	         // Send message
+	         Transport.send(message);
+
+	         System.out.println("Sent message successfully....");
+
+	      } catch (Exception e) {
+	            e.printStackTrace();
+	      }
+	   }
 }

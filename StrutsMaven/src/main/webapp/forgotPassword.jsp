@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="s" uri="/struts-tags"%>
     <!DOCTYPE html>
 <html>
 <head>
@@ -37,20 +38,23 @@ label {
     <div class="panel-body">
     <form role="form" method="post" action="checkRegMail">
     <div><label>Enter your email address and we will send you a link to reset your password.</label></div>
-  <div class="form-group">
-     
-     <s:if test="hasActionErrors()">
+  
+   <s:if test="hasActionErrors()">
    <div class="errors">
       <s:actionerror/>
    </div>
      </s:if>
+  
+  <div class="form-group">
+     
+    
   
     <input type="email" class="form-control" id="email" name="email" required="required" placeholder="Enter email">
   </div>
   
   
    <div class="form-group" style="margin-top: 10px;">
-     <button type="button" class="btn btn-success">Send passwod reset email</button>
+     <button type="submit" class="btn btn-success">Send password reset email</button>
   </div>
 </form>
     </div>

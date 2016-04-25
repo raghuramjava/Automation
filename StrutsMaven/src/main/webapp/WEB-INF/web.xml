@@ -29,6 +29,15 @@
   <listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>  
   </listener> 
   
+  <servlet>
+  <servlet-name>reservationChart</servlet-name> 
+  <servlet-class>general.ResChartServlet</servlet-class> 
+  </servlet>
+ <servlet-mapping>
+  <servlet-name>reservationChart</servlet-name> 
+  <url-pattern>/reservationChartAction</url-pattern> 
+  </servlet-mapping>
+  
 
    
 </web-app>

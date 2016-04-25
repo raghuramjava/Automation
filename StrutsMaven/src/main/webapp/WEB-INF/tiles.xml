@@ -11,19 +11,56 @@
    <put-attribute name="body" value="/pages/general/HomeCalendar.jsp"/>   
    </definition>  
    
-   <definition name="search-result" extends="login-success">   
-   <put-attribute name="title" value="Search result "/>   
-   <put-attribute name="body" value="/pages/search/SearchResult.jsp"/>   
+   
+   <definition name="admin-default" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Admin"/>   
+   <put-attribute name="body" value="/pages/admin/Adminhome.jsp"/>   
    </definition>
    
-   <definition name="new-bike" extends="login-success">   
-   <put-attribute name="title" value="Create Bike "/>   
-   <put-attribute name="body" value="/pages/search/newBike.jsp"/>   
+   <definition name="admin-email" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Admin"/>   
+   <put-attribute name="body" value="/pages/admin/AdminEmail.jsp"/>   
    </definition>
    
-   <definition name="bike-details" extends="login-success">   
-   <put-attribute name="title" value="Bike Details "/>   
-   <put-attribute name="body" value="/pages/search/bikeDetails.jsp"/>   
+   <definition name="admin-userslist" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Admin"/>   
+   <put-attribute name="body" value="/pages/admin/AdminUsers.jsp"/>   
+   </definition>
+   
+   <definition name="admin-newUser" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Admin"/>   
+   <put-attribute name="body" value="/pages/admin/AdminNewUser.jsp"/>   
+   </definition>
+   
+   
+   <definition name="reservation-default" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Reservation"/>   
+   <put-attribute name="body" value="/pages/reservation/Reservationdefault.jsp"/>   
+   </definition>
+   
+    <definition name="reservation-pricing" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Admin"/>   
+   <put-attribute name="body" value="/pages/reservation/PriceInventory.jsp"/>   
+   </definition>
+   
+    <definition name="reservation-newReservation" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="New Reservation"/>   
+   <put-attribute name="body" value="/pages/reservation/NewReservation.jsp"/>   
+   </definition>
+   
+   <definition name="reservation-reservationDetails" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="New Reservation"/>   
+   <put-attribute name="body" value="/pages/reservation/ReservationDetails.jsp"/>   
+   </definition>
+   
+   <definition name="reservation-Search" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Search Reservation"/>   
+   <put-attribute name="body" value="/pages/reservation/ReservationSearch.jsp"/>   
+   </definition>
+   
+    <definition name="reservation-SearchResult" template="/layoutmanager.jsp">   
+   <put-attribute name="title" value="Search Reservation"/>   
+   <put-attribute name="body" value="/pages/reservation/ReservationSearchResult.jsp"/>   
    </definition>
    
    
